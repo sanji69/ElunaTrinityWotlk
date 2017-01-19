@@ -18,6 +18,7 @@
 // This is where scripts' loading functions should be declared:
 void AddSC_Transmogrification();
 void AddSC_GOMove_commandscript();
+void AddSC_REFORGER_NPC();
 
 
 // The name of this function should match:
@@ -26,4 +27,5 @@ void AddCustomScripts()
 {
     AddSC_Transmogrification();
 	AddSC_GOMove_commandscript();
+	AddSC_REFORGER_NPC();
 }
