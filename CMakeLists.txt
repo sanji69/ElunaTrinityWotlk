@@ -37,6 +37,14 @@ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH 1)
 # set macro-directory
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/macros")
 
+SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "E:/Wow-Serveur-3.3.5/Assembly/boost_1_62_0_140x64/lib64-msvc-14.0")
+SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "E:/Wow-Serveur-3.3.5/Assembly/boost_1_62_0_140x64/lib64-msvc-14.0")
+FIND_PACKAGE(Boost)
+IF (Boost_FOUND)
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+ADD_DEFINITIONS( "-DHAS_BOOST" )
+ENDIF()
+
 # build in Release-mode by default if not explicitly set
 if( NOT CMAKE_BUILD_TYPE )
   set(CMAKE_BUILD_TYPE "Release")
